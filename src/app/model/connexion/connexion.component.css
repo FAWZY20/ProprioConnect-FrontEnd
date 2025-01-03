@@ -1,0 +1,59 @@
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_connexion{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.block-role{
+    display: flex;
+    flex-direction: row;
+}
+
+.block-role .form-check{
+    padding: 0;
+    padding-right: 10px;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+}
+
+.btn-role:hover{
+    color: black;
+    background-color:  #3CB371;
+    border: 1px solid black;
+}
+
+.btn-role{
+    background-color:  #3CB371 !important;
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+
+.form_connexion{
+    margin: 200px;
+}
+
+.form_connexion input{
+    margin-bottom: 30px;
+}
+
+.btn-connexion{
+    margin-top: 50px;
+    background-color:  #3CB371;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}

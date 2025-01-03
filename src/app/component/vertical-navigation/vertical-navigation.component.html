@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <aside class="main_sidebar">
+        <div>
+            <p class="title"><span><img src="../../../assets/icon/batiment_white.png" width="45" height="45" alt="">
+                </span> ProprioConnect</p>
+            <ul>
+                <li class="active"><a [routerLink]="['/proprietaire']"><span class="img-menu"> <img src="../../../assets/icon/accueil.png" height="30" width="30" alt=""></span>Tableau de bord</a></li>
+                <li><a [routerLink]="['/proprietaire/document']"><span class="img-menu"><img src="../../../assets/icon/document.png" height="30" width="30" alt=""></span>Documents</a></li>
+                <li><a href="#" [routerLink]="['/proprietaire/paiement']"><span class="img-menu"><img src="../../../assets/icon/carte.png" height="30" width="30" alt=""></span>Paiements</a></li>
+                <li><a href="#"><span class="img-menu"><img src="../../../assets/icon/marteau.png" height="30" width="30" alt=""></span>Gestion des sinistres</a></li>
+                <li><a href="#"><span class="img-menu"><img src="../../../assets/icon/trouver.png" height="30" width="30" alt=""></span>État du logement</a></li>
+                <li><a href="#"><span class="img-menu"><img src="../../../assets/icon/message.png" height="30" width="30" alt=""></span>Messagerie</a></li>
+            </ul>
+        </div>
+        <div class="main_sidebar_params">
+            <ul>
+                <li><a href="#"><span class="img-menu"><img src="../../../assets/icon/parametre.png" height="30" width="30" alt=""></span>Paramètres</a></li>
+                <li><a href="#"><span class="img-menu"><img src="../../../assets/icon/aide.png" height="30" width="30" alt=""></span>Aide et support</a></li>
+                <br />
+                <li><a href="#"><span class="img-menu"><img src="../../../assets/icon/deconnecter.png" height="30" (click)="logout()" width="30" alt=""></span>Deconnexion</a></li>
+            </ul>
+        </div>
+    </aside>
+</div>

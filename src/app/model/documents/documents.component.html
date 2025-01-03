@@ -1,0 +1,61 @@
+<div class="page">
+    <app-vertical-navigation></app-vertical-navigation>
+    <div class="page-content">
+        <h1 class="title-page">Documents</h1>
+        <div class="document_bloc">
+            <p class="subtitle-page">Les derniers documents recus</p>
+            <div class="document_bloc_list">
+                <div *ngFor="let document of documentsRecus | slice:0:5" class="col-md-3 document">
+                    <div class="document_nom">
+                        <div>
+                            <p>{{document.nomFichier[0]}}</p>
+                        </div>
+                        <div class="document_extension_bloc"> 
+                            <p class="document_extension">{{document.nomFichier[document.dernierIndex]}}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p  class="document_info_auteur">Auteur : {{document.auteur}} </p>
+                        </div>
+                        <div class="document_info">
+                            <p>Sujet : {{document.sujet}}</p>
+                            <p>Date : {{document.datecreation}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 btn_voir_plus">
+                    <p>Voir plus de doccument<span> <img src="../../../assets/icon/fleche-droite.png" height="80" width="80" alt=""> </span> </p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="document_bloc">
+            <p class="subtitle-page">Les derniers documents envoyés</p>
+            <div class="document_bloc_list">
+                <div *ngFor="let document of documentsEnvoyer | slice:0:5" class="col-md-3 document">
+                    <div class="document_nom">
+                        <div>
+                            <p>{{document.nomFichier[0]}}</p>
+                        </div>
+                        <div class="document_extension_bloc"> 
+                            <p class="document_extension">{{document.nomFichier[document.dernierIndex]}}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p  class="document_info_auteur">Destinataire : {{document.destinataire}} </p>
+                        </div>
+                        <div class="document_info">
+                            <p>Sujet : {{document.sujet}}</p>
+                            <p>Date : {{document.datecreation}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 btn_voir_plus">
+                    <p>Voir plus de doccument<span> <img src="../../../assets/icon/fleche-droite.png" height="80" width="80" alt=""> </span> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

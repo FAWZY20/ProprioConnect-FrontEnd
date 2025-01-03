@@ -1,0 +1,36 @@
+<div class="container-fuid">
+    <div class="row">
+        <div class="col-6 background">
+            <img src="../../assets/images/background_connexion.png" alt="">
+        </div>
+        <div class="col-6">
+            <div class="form_connexion">
+                <p class="title_connexion"><span><img src="../../assets/icon/batiment.png" height="80" width="80"
+                            alt=""> </span> Connexion</p>
+                <div class="block-role">
+                    <div class="form-check">
+                        <input type="radio" class="btn-check" name="options" id="option1" (click)="checkRole(true)" autocomplete="off" checked>
+                        <label class="btn btn-role" for="option1">Proprietaire</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="btn-check" name="options" id="option2" (click)="checkRole(false)" autocomplete="off" checked>
+                        <label class="btn btn-role" for="option2">Locataire</label>
+                    </div>
+                </div>
+                <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email"
+                            [(ngModel)]="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                            [(ngModel)]="password">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-connexion btn btn-lg w-100">connexion</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

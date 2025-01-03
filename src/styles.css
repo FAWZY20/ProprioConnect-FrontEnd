@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #F7F3ED ;
+}
+
+.page{
+    display: flex;
+    flex-direction: row;
+}
+
+.page-content{
+    flex: 1;
+    padding: 0.5vw;
+    padding-left: 3vw;
+}
+
+.title-page{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.subtitle-page{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
