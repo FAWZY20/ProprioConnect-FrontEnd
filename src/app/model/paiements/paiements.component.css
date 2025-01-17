@@ -19,6 +19,8 @@ tr{
   text-align: center;
 }
 
-.dwd{
+.btn-dwd{
   border-radius: 20px;
+  background-color: #709775;
+  color: white;
 }
