@@ -1,23 +1,41 @@
 <div class="page">
-    <app-vertical-navigation></app-vertical-navigation>
-    <div class="page-content">
-        <h1 class="title-page">Paiement</h1>
-        <div class="paiement_infoGeneral_bloc col-md-8">
-            <div class="paiement_infoGeneral_bloc__info">
-                <p>Montant total</p>
-                <p></p>
-            </div>
-            <div class="paiement_infoGeneral_bloc__info">
-                <p>Date d'échéance</p>
-                <p></p>
-            </div>
-            <div class="paiement_infoGeneral_bloc__info">
-                <p>Statut général</p>
-                <p></p>
-            </div>
-        </div>
-        <div>
+  <app-vertical-navigation></app-vertical-navigation>
+  <div class="page-content">
+    <h1 class="title-page">Paiement</h1>
+    <div class="paiement_infoGeneral_bloc col-md-8">
 
-        </div>
     </div>
+    <div class="paiement_historique_bloc col-md-10">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col" colspan="4">Historique des paiements</th>
+          </tr>
+          <tr>
+            <th scope="col">ID de transaction</th>
+            <th scope="col">Locataire</th>
+            <th scope="col">Date</th>
+            <th scope="col">Montant</th>
+            <th scope="col">Statut</th>
+            <th scope="col">Facture</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let paiement of paiements">
+            <td>#{{ paiement.id }}</td>
+            <td>{{ paiement.locataire}}</td>
+            <td>{{ paiement.dateCreation }}</td>
+            <td>{{ paiement.montant }}€</td>
+            <td>
+              <span *ngIf="paiement.statut == 'EN_ATTENTE'" style="background-color: yellow;" class="badge badge-pill">En attente</span>
+              <span *ngIf="paiement.statut == 'EN_RETARD'" style="background-color: red;" class="badge badge-pil">En retard</span>
+              <span *ngIf="paiement.statut == 'REGLE'" style="background-color: green;" class="badge badge-pill">Réglé</span>
+            </td>
+            <td><button type="button" class="btn btn-primary btn-dwd">Télécharger <img
+                  src="../../../assets/icon/dowload.svg"></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
